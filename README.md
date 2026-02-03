@@ -21,7 +21,6 @@ The report includes:
 👉 **View Live Allure Report**
 
 ---
-
 ### ⚙️ 2. Manual Test Execution (GitHub Actions)
 
 You can trigger a fresh test run directly from the GitHub interface:
