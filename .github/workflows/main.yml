@@ -4,7 +4,6 @@ on:
   push:
     branches: [ main ]
 
-
 permissions:
   contents: write
 
@@ -27,7 +26,7 @@ jobs:
           docker build -t bookstore-tests .
           mkdir -p target/allure-results
           docker run --name test-container bookstore-tests
-          docker cp test-container:/app/target/allure-results ./target/allure-results
+          docker cp test-container:/app/target/allure-results/. ./target/allure-results
 
       - name: Get Allure History
         uses: actions/checkout@v4
