@@ -2,7 +2,7 @@ name: API Automation CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, master ]
   workflow_dispatch:
 
 permissions:
