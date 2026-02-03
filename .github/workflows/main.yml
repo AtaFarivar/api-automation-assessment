@@ -3,9 +3,6 @@ name: API Automation CI
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
   workflow_dispatch:
 
 permissions:
@@ -27,7 +24,9 @@ jobs:
 
       - name: Run Tests in Docker
         run: |
+          docker rm -f test-container || true
           docker build -t bookstore-tests .
+          rm -rf target/allure-results
           mkdir -p target/allure-results
           docker run --name test-container bookstore-tests
           docker cp test-container:/app/target/allure-results/. ./target/allure-results
