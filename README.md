@@ -67,7 +67,7 @@ The framework follows a **decoupled, modular architecture** to ensure long-term 
 
 ---
 
-## 💎 Senior-Level Technical Decisions
+## 💎 Technical Decisions
 
 To meet **enterprise-grade expectations**, the following strategic decisions were implemented:
 
